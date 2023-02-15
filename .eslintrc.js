@@ -45,7 +45,7 @@ module.exports = {
                 ],
             }],
         // todo fix on save
-        'linebreak-style': 'off',
+        'linebreak-style': 0,
         'max-len': ['error', { ignoreComments: true, code: 100 }],
     },
     globals: {
