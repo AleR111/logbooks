@@ -3,11 +3,16 @@
 @import "./themes/normal.scss";
 @import "./variables/global.scss";
 
-.app {
+.body {
     font-size: var(--font-m);
-    background: var(--bg-color);
     color: var(--primary-color);
+}
+
+.app {
+    background: var(--bg-color);
     min-height: 100vh;
+    font-size: var(--font-m);
+    color: var(--primary-color);
 }
 
 .content-page {
