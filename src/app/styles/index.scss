@@ -3,7 +3,7 @@
 @import "./themes/normal.scss";
 @import "./variables/global.scss";
 
-.body {
+body {
     font-size: var(--font-m);
     color: var(--primary-color);
 }
@@ -11,8 +11,6 @@
 .app {
     background: var(--bg-color);
     min-height: 100vh;
-    font-size: var(--font-m);
-    color: var(--primary-color);
 }
 
 .content-page {
