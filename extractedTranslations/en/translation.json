@@ -7,10 +7,13 @@
   "Page not found": "Page not found",
   "Reload page": "Reload page",
   "Short Language": "",
+  "Sign In": "",
   "Sine in": "Sine in",
   "Something went wrong": "Something went wrong",
   "about": "about",
   "asc": "asc",
   "main": "main",
-  "toggle": "toggle"
+  "password": "password",
+  "toggle": "toggle",
+  "username": "username"
 }

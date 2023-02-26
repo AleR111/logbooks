@@ -10,17 +10,20 @@ interface ModalProps {
     className?: string;
     isOpen?: boolean;
     onClose?: () => void;
+    lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
 
 export const Modal: FC<ModalProps> = (props) => {
     const {
-        className, children, isOpen, onClose,
+        className, children, isOpen, onClose, lazy,
     } = props;
 
     const { theme } = useTheme();
     const [isClosing, setIsClosing] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
+
     const timeRef = useRef<ReturnType<typeof setTimeout>>();
 
     const closeHandler = useCallback(() => {
@@ -57,10 +60,24 @@ export const Modal: FC<ModalProps> = (props) => {
         };
     }, [isOpen, onKeyDown]);
 
+    useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
+        }
+
+        // return () => {
+        //     setIsMounted(false);
+        // };
+    }, [isOpen]);
+
     const mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
+
+    if (lazy && !isMounted) {
+        return null;
+    }
 
     return (
         <Portal>
