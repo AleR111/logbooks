@@ -1,4 +1,5 @@
 import { configureStore, DeepPartial, ReducersMapObject } from '@reduxjs/toolkit';
+import { ResultType } from '@remix-run/router/dist/utils';
 import { counterReducer } from 'entities/Counter/model/slice/counterSlice';
 import { userReducer } from 'entities/User';
 import { createReducerManager } from './reducerManager';
@@ -27,3 +28,5 @@ export function createReduxStore(
 
     return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch']
