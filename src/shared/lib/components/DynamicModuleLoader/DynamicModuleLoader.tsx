@@ -9,7 +9,7 @@ export type ReducersList = {
 }
 
 interface DynamicModuleLoaderProps {
-    reducers?: ReducersList;
+    reducers: ReducersList;
     remoteAfterUnmount?: boolean
 }
 
@@ -25,7 +25,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
         let name: StateSchemaKey;
         for (name in reducers) {
             if (reducers[name]) {
-                store.reducerManager.add(name, reducers[name]);
+                store.reducerManager.add(name, reducers[name] as Reducer);
                 dispatch({ type: `@INIT ${name} reducer` });
             }
         }
