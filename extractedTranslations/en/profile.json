@@ -1,13 +1,20 @@
 {
+  "\"Incorrect user data\"": "",
   "An error occurred while loading the profile": "",
   "Edit": "",
+  "Incorrect age": "",
+  "Incorrect country": "",
+  "Incorrect user data": "",
+  "No data": "",
   "Profile": "",
   "Refresh the page": "",
+  "Server error": "",
   "Type avatar link": "",
   "Type username": "",
   "Your age": "",
   "Your city": "",
   "Your last name": "",
   "Your name": "",
-  "avatar": ""
+  "avatar": "",
+  "server error": ""
 }
