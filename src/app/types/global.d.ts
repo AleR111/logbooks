@@ -19,7 +19,10 @@ declare module '*.jpeg';
 declare module '*.webp';
 declare const __IS_DEV__: boolean;
 declare const __API__: string;
+declare const __PROJECT__: 'storybook' | 'frontend' | 'jest';
 
-type DeepPartial<T> = T extends object ? {
-    [K in keyof T]?: DeepPartial<T[K]>
-} : T
+type DeepPartial<T> = T extends object
+    ? {
+          [K in keyof T]?: DeepPartial<T[K]>;
+      }
+    : T;
