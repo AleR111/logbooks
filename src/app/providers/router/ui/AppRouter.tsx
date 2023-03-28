@@ -14,18 +14,6 @@ import { PageLoader } from 'shared/ui/PageLoader/PageLoader';
 import { RequireAuth } from './RequireAuth';
 
 export const AppRouter = memo(() => {
-    const isAuth = useSelector(getAuthUserData);
-
-    const routers = useMemo(
-        () => Object.values(routeConfig).filter((route) => {
-            if (!route.authOnly) {
-                return true;
-            }
-            return route.authOnly === !!isAuth;
-        }),
-        [isAuth],
-    );
-
     const renderWithWrapper = useCallback((route: AppRouterProps) => {
         const element = <div className="page-wrapper">{route.element}</div>;
 
