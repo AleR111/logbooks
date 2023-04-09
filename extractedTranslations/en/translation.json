@@ -16,6 +16,10 @@
   "Auth ": "",
   "Auth fo": "",
   "Auth form": "Auth form",
+  "Back ": "Back ",
+  "Back to ": "Back to ",
+  "Back to articles": "Back to articles",
+  "Back to list": "Back to list",
   "Cancel": "Cancel",
   "Cansel": "Cansel",
   "Comments": "Comments",
@@ -34,6 +38,13 @@
   "No data": "No data",
   "Page not found": "Page not found",
   "Profile": "Profile",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Refre": "Refre",
   "Refresh ": "Refresh ",
   "Refresh the ": "Refresh the ",

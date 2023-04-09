@@ -56,6 +56,7 @@ module.exports = {
         'react/prop-types': 'off',
         'react/jsx-no-useless-fragment': 'off',
         'no-undef': 'off',
+        'react/no-array-index-key': 'off',
     },
     globals: {
         __IS_DEV__: true,
@@ -64,11 +65,13 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['**/src/**/*.test.{ts,tsx}'],
+            files: [
+                '**/src/**/*.test.{ts,tsx}',
+                '**/src/**/*.stories.{ts,tsx}',
+            ],
             rules: {
                 'i18next/no-literal-string': 'off',
                 'max-len': 'off',
-
             },
         },
     ],
