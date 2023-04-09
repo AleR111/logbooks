@@ -1,5 +1,5 @@
 import { ArticleDetails } from 'entities/Article';
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -9,6 +9,7 @@ import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader/D
 import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { AddCommentForm } from 'features/AddCommentForm';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import cls from './ArticleDetailsPage.module.scss';
@@ -16,6 +17,7 @@ import {
     articleDetailsCommentsReducer,
     getArticleComments,
 } from '../../model/slice/articleDetailsCommentsSlice';
+import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 
 const reducers = {
     articleDetailsComments: articleDetailsCommentsReducer,
@@ -38,6 +40,10 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props) => {
         dispatch(fetchCommentsByArticleId(id));
     });
 
+    const onSendComment = useCallback((text: string) => {
+        dispatch(addCommentForArticle(text));
+    }, [dispatch]);
+
     if (!id) {
         return (
             <div className={classNames(cls.articleDetailsPage, [className])}>
@@ -45,11 +51,13 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props) => {
             </div>
         );
     }
+
     return (
         <DynamicModuleLoader reducers={reducers} remoteAfterUnmount>
             <div className={classNames(cls.articleDetailsPage, [className])}>
                 <ArticleDetails id={id} />
                 <Text title={t('Comments')} className={cls.commentTitle} />
+                <AddCommentForm onSendComment={onSendComment} />
                 <CommentList comments={comments} isLoading={commentsLoading} />
             </div>
         </DynamicModuleLoader>

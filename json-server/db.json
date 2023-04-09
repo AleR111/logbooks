@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,48 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "userId": "1",
+      "articleId": "1",
+      "text": "fgfgbgfb",
+      "id": "t8hhAd7"
+    },
+    {
+      "userId": "2",
+      "articleId": "1",
+      "text": "dfvdfvdfvfv",
+      "id": "qnLwFIT"
+    },
+    {
+      "userId": "2",
+      "articleId": "1",
+      "text": "fngn",
+      "id": "S4yL93z"
+    },
+    {
+      "userId": "2",
+      "articleId": "1",
+      "text": "cccccccc",
+      "id": "Rpw_tf9"
+    },
+    {
+      "userId": "2",
+      "articleId": "1",
+      "text": "ffbfb",
+      "id": "ezqsH0a"
+    },
+    {
+      "userId": "2",
+      "articleId": "1",
+      "text": "qqqqqqqq",
+      "id": "_iVcjpv"
+    },
+    {
+      "userId": "2",
+      "articleId": "1",
+      "text": "ccccccssss",
+      "id": "tOtb3s9"
     }
   ],
   "users": [
@@ -118,14 +162,28 @@
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "2",
+      "first": "aaavvvv",
+      "lastname": "sss",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    }
+  ]
 }
