@@ -26,16 +26,6 @@ export const ArticleList: React.FC<ArticleListProps> = (props) => {
         className, articles, isLoading, view = ArticleView.SMALL,
     } = props;
 
-    if (isLoading) {
-        return (
-            <div
-                className={classNames(cls.articleList, [className, cls[view]])}
-            >
-                {getSkeletons(view)}
-            </div>
-        );
-    }
-
     const renderArticle = (article: Article) => (
         <ArticleListItem
             className={cls.card}
@@ -48,6 +38,7 @@ export const ArticleList: React.FC<ArticleListProps> = (props) => {
     return (
         <div className={classNames(cls.articleList, [className, cls[view]])}>
             {articles.length ? articles.map(renderArticle) : null}
+            {isLoading && getSkeletons(view)}
         </div>
     );
 };

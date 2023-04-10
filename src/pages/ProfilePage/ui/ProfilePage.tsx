@@ -25,6 +25,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
+import { Page } from 'shared/ui/Page/Page';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 // import cls from './ProfilePage.module.scss';
 
@@ -113,8 +114,8 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} remoteAfterUnmount>
-            <ProfilePageHeader />
-            <div className={classNames('cls.profilePage', [className])}>
+            <Page className={classNames('cls.profilePage', [className])}>
+                <ProfilePageHeader />
                 {validateErrors?.length
                     && validateErrors.map((error) => (
                         <Text
@@ -137,7 +138,7 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
                     onChangeCurrency={onChangeCurrency}
                     onChangeCountry={onChangeCountry}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

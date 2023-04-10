@@ -12,6 +12,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Page } from 'shared/ui/Page/Page';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import cls from './ArticleDetailsPage.module.scss';
@@ -53,21 +54,21 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props) => {
 
     if (!id) {
         return (
-            <div className={classNames(cls.articleDetailsPage, [className])}>
+            <Page className={classNames(cls.articleDetailsPage, [className])}>
                 {t('Article is not define')}
-            </div>
+            </Page>
         );
     }
 
     return (
         <DynamicModuleLoader reducers={reducers} remoteAfterUnmount>
-            <div className={classNames(cls.articleDetailsPage, [className])}>
+            <Page className={classNames(cls.articleDetailsPage, [className])}>
                 <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>{t('Back to list')}</Button>
                 <ArticleDetails id={id} />
                 <Text title={t('Comments')} className={cls.commentTitle} />
                 <AddCommentForm onSendComment={onSendComment} />
                 <CommentList comments={comments} isLoading={commentsLoading} />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };
