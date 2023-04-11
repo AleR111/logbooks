@@ -19,7 +19,7 @@ export function buildWebpackConfig(
             clean: true,
             publicPath: '/',
         },
-        devtool: isDev ? 'inline-source-map' : undefined,
+        devtool: isDev ? 'eval-source-map' : undefined,
         plugins: buildPlugins(options),
         module: {
             rules: buildLoaders(options),

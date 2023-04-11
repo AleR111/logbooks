@@ -50,7 +50,7 @@ const AddCommentForm: React.FC<AddCommentFormProps> = (props) => {
             <div className={classNames(cls.addCommentForm, [className])}>
                 <Input
                     className={cls.input}
-                    value={text}
+                    value={text ?? ''}
                     onChange={onCommentTextChange}
                     placeholder={t('Type comment')}
                 />
