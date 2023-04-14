@@ -49,7 +49,7 @@ export const Page: React.FC<PageProps> = (props) => {
             onScroll={onScroll}
         >
             {children}
-            <div ref={triggerRef} />
+            {onScrollEnd && <div className={cls.trigger} ref={triggerRef} />}
         </section>
     );
 };

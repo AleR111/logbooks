@@ -90,10 +90,11 @@
       "title": "Javascript news2",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 122,
+      "createdAt": "27.02.2022",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -114,8 +115,8 @@
       "title": "Javascript news3",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 3022,
+      "createdAt": "26.04.2022",
       "type": [
         "IT"
       ],
@@ -138,10 +139,11 @@
       "title": "Javascript news4",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 11022,
+      "createdAt": "26.07.2022",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -162,8 +164,8 @@
       "title": "Javascript news5",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 22,
+      "createdAt": "16.02.2022",
       "type": [
         "IT"
       ],
@@ -186,10 +188,10 @@
       "title": "Javascript news6",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 3442,
+      "createdAt": "09.02.2022",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -210,8 +212,8 @@
       "title": "Javascript news7",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 102,
+      "createdAt": "26.03.2022",
       "type": [
         "IT"
       ],
@@ -234,8 +236,8 @@
       "title": "Javascript news8",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1092,
+      "createdAt": "26.06.2022",
       "type": [
         "IT"
       ],
@@ -259,7 +261,7 @@
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "29.02.2022",
       "type": [
         "IT"
       ],
@@ -283,9 +285,9 @@
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "25.05.2022",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -306,8 +308,8 @@
       "title": "Javascript news11",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 10225,
+      "createdAt": "26.05.2022",
       "type": [
         "IT"
       ],
@@ -331,7 +333,7 @@
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "21.02.2022",
       "type": [
         "IT"
       ],
@@ -355,7 +357,7 @@
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "26.05.2022",
       "type": [
         "IT"
       ],
@@ -379,7 +381,7 @@
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "20.05.2022",
       "type": [
         "IT"
       ],
@@ -405,7 +407,9 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -453,7 +457,8 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "type": [
-        "IT"
+        "SCIENCE",
+        "ECONOMICS"
       ],
       "blocks": [
         {

@@ -19,6 +19,6 @@ export const fetchNextArticlesPage = createAsyncThunk<
 
     if (hasMore && !isLoading) {
         dispatch(articlesPageActions.setPage(pageNumber + 1));
-        dispatch(fetchArticlesList({ page: pageNumber + 1 }));
+        dispatch(fetchArticlesList({}));
     }
 });
