@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Text, TextSize } from 'shared/ui/Text/Text';
+import { HTMLAttributeAnchorTarget } from 'react';
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -21,11 +22,16 @@ interface ArticleListProps {
     articles: Article[];
     isLoading?: boolean;
     view?: ArticleView;
+    target?: HTMLAttributeAnchorTarget;
 }
 
 export const ArticleList: React.FC<ArticleListProps> = (props) => {
     const {
-        className, articles, isLoading, view = ArticleView.SMALL,
+        className,
+        articles,
+        isLoading,
+        view = ArticleView.SMALL,
+        target,
     } = props;
     const { t } = useTranslation();
 
@@ -35,6 +41,7 @@ export const ArticleList: React.FC<ArticleListProps> = (props) => {
             key={article.id}
             article={article}
             view={view}
+            target={target}
         />
     );
 
