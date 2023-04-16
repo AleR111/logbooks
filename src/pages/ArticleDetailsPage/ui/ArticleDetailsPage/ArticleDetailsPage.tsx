@@ -28,6 +28,7 @@ import {
     getArticleComments,
 } from '../../model/slices/articleDetailsCommentsSlice';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 const reducers = {
     articleDetailsPage: articleDetailsPageReducer,
@@ -64,10 +65,6 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props) => {
         [dispatch],
     );
 
-    const onBackToList = useCallback(() => {
-        navigate(`${RoutePath.article_details}`);
-    }, [navigate]);
-
     if (!id) {
         return (
             <Page className={classNames(cls.articleDetailsPage, [className])}>
@@ -79,9 +76,7 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props) => {
     return (
         <DynamicModuleLoader reducers={reducers} remoteAfterUnmount>
             <Page className={classNames(cls.articleDetailsPage, [className])}>
-                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-                    {t('Back to list')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text
                     size={TextSize.L}
