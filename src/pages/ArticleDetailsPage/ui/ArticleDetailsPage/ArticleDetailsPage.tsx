@@ -13,8 +13,8 @@ import { AddCommentForm } from 'features/AddCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
-import { getArticleRecommendationsIsLoading } from 'pages/ArticleDetailsPage/model/selectors/recommendations';
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
+import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations';
+import { articleDetailsPageReducer } from '../../model/slices';
 import {
     fetchArticlesRecommendations,
 } from '../../model/services/fetchArticlesRecommendations/fetchArticlesRecommendations';
