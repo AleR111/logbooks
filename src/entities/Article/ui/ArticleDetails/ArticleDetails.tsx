@@ -9,6 +9,8 @@ import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import EyeIcon from 'shared/assets/icons/eye.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
+import { Icon } from 'shared/ui/Icon/Icon';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { ArticleCodeBlockComponent } from '../../ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 import {
@@ -82,13 +84,16 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> = memo((props) => {
     if (isLoading) {
         content = (
             <>
-                <Skeleton
-                    className={cls.avatar}
-                    width={200}
-                    height={200}
-                    border="50%"
-                />
-                <Skeleton className={cls.title} width={300} height={32} />
+                <HStack justify="center" max>
+                    <Skeleton
+                        className={cls.avatar}
+                        width={200}
+                        height={200}
+                        border="50%"
+                    />
+                </HStack>
+
+                <Skeleton width={300} height={32} />
                 <Skeleton className={cls.skeleton} width={600} height={24} />
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
@@ -104,27 +109,30 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> = memo((props) => {
     } else {
         content = (
             <>
-                <div className={cls.avatarWrapper}>
+                <HStack justify="center" max>
                     <Avatar
                         size={200}
                         src={article?.img}
                         className={cls.avatar}
                     />
-                </div>
+                </HStack>
 
-                <Text
-                    title={article?.title}
-                    text={article?.subtitle}
-                    size={TextSize.L}
-                />
-                <div className={cls.articleInfo}>
-                    <EyeIcon className={cls.icon} />
-                    <Text text={String(article?.views)} />
-                </div>
-                <div className={cls.articleInfo}>
-                    <CalendarIcon className={cls.icon} />
-                    <Text text={article?.createdAt} />
-                </div>
+                <VStack gap="4" max>
+                    <Text
+                        title={article?.title}
+                        text={article?.subtitle}
+                        size={TextSize.L}
+                    />
+                    <HStack gap="8">
+                        <Icon Svg={EyeIcon} />
+                        <Text text={String(article?.views)} />
+                    </HStack>
+                    <HStack gap="8">
+                        <Icon Svg={CalendarIcon} />
+                        <Text text={article?.createdAt} />
+                    </HStack>
+                </VStack>
+
                 {article?.blocks.map(renderBlock)}
             </>
         );
@@ -132,9 +140,9 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> = memo((props) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} remoteAfterUnmount>
-            <div className={classNames(cls.articleDetails, [className])}>
+            <VStack gap="16" max className={classNames(cls.articleDetails, [className])}>
                 {content}
-            </div>
+            </VStack>
         </DynamicModuleLoader>
     );
 });

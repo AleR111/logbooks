@@ -1,30 +1,7 @@
+.articleDetails {
+    min-height: 100%;
+}
+
 .avatar {
     margin: 0 auto;
-}
-
-.title {
-    margin-top: 20px;
-}
-
-.skeleton {
-    margin-top: 15px;
-}
-
-.avatarWrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.icon {
-    margin-right: 8px;
-    fill: var(--primary-color);
-}
-
-.articleInfo {
-    display: flex;
-    align-items: center;
-}
-
-.block {
-    margin-top: 16px;
 }
