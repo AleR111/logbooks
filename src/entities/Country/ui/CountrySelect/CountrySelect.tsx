@@ -42,7 +42,7 @@ export const CountrySelect: FC<CountrySelectProps> = memo((props) => {
             value={value}
             onChange={onChangeHandler}
             readonly={readonly}
-            direction="top"
+            direction="top right"
         />
     );
 });

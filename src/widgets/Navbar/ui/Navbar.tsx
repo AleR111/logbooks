@@ -10,6 +10,8 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -50,13 +52,18 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 >
                     {t('Create article')}
                 </AppLink>
-                <Button
-                    theme={ButtonTheme.CLEAR_INVERTED}
-                    className={cls.links}
-                    onClick={onLogout}
-                >
-                    {t('Log out')}
-                </Button>
+                <Dropdown
+                    className={cls.dropdown}
+                    trigger={<Avatar size={30} src={authData.avatar} />}
+                    items={[
+                        {
+                            content: t('Profile'),
+                            href: `${RoutePath.profile}/${authData.id}`,
+                        },
+                        { content: t('Log out'), onClick: onLogout },
+                    ]}
+                    direction="bottom left"
+                />
             </header>
         );
     }
