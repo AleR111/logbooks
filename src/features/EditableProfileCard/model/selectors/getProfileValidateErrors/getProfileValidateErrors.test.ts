@@ -1,8 +1,6 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import { ValidateProfileError } from '../../types/profile';
 import { getProfileValidateErrors } from './getProfileValidateErrors';
+import { ValidateProfileError } from '../../types/editableProfileCardSchema';
 
 const validateErrors = [
     ValidateProfileError.INCORRECT_USER_DATA,

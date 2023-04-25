@@ -22,6 +22,7 @@ import {
 } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
+import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 
 const reducers = {
     articlesPage: articlesPageReducer,
@@ -33,14 +34,8 @@ interface ArticlesPageProps {
 
 const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
     const { className } = props;
-    const { t } = useTranslation('article');
     const dispatch = useAppDispatch();
     const [searchParams] = useSearchParams();
-
-    const articles = useSelector(getArticles.selectAll);
-    const isLoading = useSelector(getArticlesPageIsLoading);
-    const error = useSelector(getArticlesPageError);
-    const view = useSelector(getArticlesPageView);
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
@@ -57,12 +52,7 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
                 className={classNames(cls.articlesPage, [className])}
             >
                 <ArticlesPageFilters />
-                <ArticleList
-                    isLoading={isLoading}
-                    articles={articles}
-                    view={view}
-                    className={cls.list}
-                />
+                <ArticleInfiniteList className={cls.list} />
             </Page>
         </DynamicModuleLoader>
     );

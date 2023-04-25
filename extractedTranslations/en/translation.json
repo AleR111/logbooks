@@ -51,6 +51,8 @@
   "No data": "No data",
   "Page not found": "Page not found",
   "Profile": "Profile",
+  "Profile ": "Profile ",
+  "Profile not found": "Profile not found",
   "Read more": {
     "": {
       "": {
@@ -99,6 +101,12 @@
   "creation date": "creation date",
   "decrement": "",
   "descending": "descending",
+  "failed ": "failed ",
+  "failed to load": "failed to load",
+  "failed to loadin": "failed to loadin",
+  "failed to loading ": "failed to loading ",
+  "failed to loading o": "failed to loading o",
+  "failed to loading of articles": "failed to loading of articles",
   "increment": "",
   "main": "main",
   "password": "password",
