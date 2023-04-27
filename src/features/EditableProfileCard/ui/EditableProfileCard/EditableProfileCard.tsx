@@ -13,6 +13,7 @@ import {
     ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { VStack } from 'shared/ui/Stack';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileLoading } from '../../model/selectors/getProfileLoading/getProfileLoading';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
@@ -22,7 +23,6 @@ import { ValidateProfileError } from '../../model/types/editableProfileCardSchem
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
-import { VStack } from 'shared/ui/Stack';
 
 const reducers: ReducersList = { profile: profileReducer };
 
@@ -116,6 +116,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                             key={error}
                             theme={TextTheme.ERROR}
                             text={validateErrorTranslates[error]}
+                            data-testid="EditableProfileCard.Error"
                         />
                     ))}
                 <ProfileCard

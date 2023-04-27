@@ -27,6 +27,7 @@ interface ArticleListProps {
     isLoading?: boolean;
     view?: ArticleView;
     target?: HTMLAttributeAnchorTarget;
+    virtualized?: boolean;
 }
 
 export const ArticleList: React.FC<ArticleListProps> = (props) => {
@@ -36,6 +37,7 @@ export const ArticleList: React.FC<ArticleListProps> = (props) => {
         isLoading,
         view = ArticleView.SMALL,
         target,
+        virtualized = true,
     } = props;
     const { t } = useTranslation();
 
@@ -113,17 +115,30 @@ export const ArticleList: React.FC<ArticleListProps> = (props) => {
                         cls[view],
                     ])}
                 >
-                    <List
-                        height={height ?? 700}
-                        rowCount={rowCount}
-                        rowHeight={isBig ? 700 : 330}
-                        rowRenderer={rowRenderer}
-                        width={width ? width - 80 : 700}
-                        autoHeight
-                        onScroll={onChildScroll}
-                        isScrolling={isScrolling}
-                        scrollTop={scrollTop}
-                    />
+                    {virtualized ? (
+                        <List
+                            height={height ?? 700}
+                            rowCount={rowCount}
+                            rowHeight={isBig ? 700 : 330}
+                            rowRenderer={rowRenderer}
+                            width={width ? width - 80 : 700}
+                            autoHeight
+                            onScroll={onChildScroll}
+                            isScrolling={isScrolling}
+                            scrollTop={scrollTop}
+                        />
+                    ) : (
+                        articles.map((article) => (
+                            <ArticleListItem
+                                className={cls.card}
+                                article={article}
+                                view={view}
+                                target={target}
+                                key={article.id}
+                            />
+                        ))
+                    )}
+
                     {isLoading && getSkeletons(view)}
                 </div>
             )}
