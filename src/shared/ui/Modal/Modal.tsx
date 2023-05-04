@@ -1,6 +1,6 @@
 import { useTheme } from 'app/providers/ThemeProvider';
 import {
-    FC, MouseEvent, useCallback, useEffect, useRef, useState,
+    FC, MouseEvent, ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Portal } from '../Portal/Portal';
@@ -11,11 +11,12 @@ interface ModalProps {
     isOpen?: boolean;
     onClose?: () => void;
     lazy?: boolean;
+    children: ReactNode;
 }
 
 const ANIMATION_DELAY = 300;
 
-export const Modal: FC<ModalProps> = (props) => {
+export const Modal = (props: ModalProps) => {
     const {
         className, children, isOpen, onClose, lazy,
     } = props;

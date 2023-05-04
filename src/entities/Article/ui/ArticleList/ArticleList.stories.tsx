@@ -78,12 +78,14 @@ Small.args = {
 
 export const LoadingBig = Template.bind({});
 LoadingBig.args = {
+    articles: [],
     isLoading: true,
     view: ArticleView.BIG,
 };
 
 export const LoadingSmall = Template.bind({});
 LoadingSmall.args = {
+    articles: [],
     isLoading: true,
     view: ArticleView.SMALL,
 };
