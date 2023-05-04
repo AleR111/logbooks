@@ -21,6 +21,7 @@ export const CommentCard: React.FC<CommentCardProps> = (props) => {
         return (
             <VStack
                 gap="8"
+                max
                 className={classNames(cls.commentCard, [
                     className,
                     cls.loading,
