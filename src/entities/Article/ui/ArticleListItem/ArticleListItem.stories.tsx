@@ -1,12 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ArticleListItem } from './ArticleListItem';
-import {
-    Article,
-    ArticleBlockType,
-    ArticleType,
-    ArticleView,
-} from '../../model/types/article';
+import { Article } from '../../model/types/article';
+import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/consts';
 
 export default {
     title: 'entities/article/ArticleListItem',
@@ -59,16 +55,14 @@ const article: Article = {
     ],
 };
 
-
 export const Big = Template.bind({});
 Big.args = {
     article,
-    view: ArticleView.BIG
+    view: ArticleView.BIG,
 };
 
 export const Small = Template.bind({});
 Small.args = {
     article,
-    view: ArticleView.SMALL
+    view: ArticleView.SMALL,
 };
-

@@ -4,7 +4,8 @@ import {
     getArticleDetailsLoading,
     getArticleDetailsError,
 } from './articleDetails';
-import { Article, ArticleBlockType, ArticleType } from '../types/article';
+import { Article } from '../types/article';
+import { ArticleBlockType, ArticleType } from '../consts/consts';
 
 const article: Article = {
     id: '1',
