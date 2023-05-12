@@ -1,17 +1,10 @@
 import { useTheme } from 'app/providers/ThemeProvider';
-import {
-    FC,
-    MouseEvent,
-    ReactNode,
-    useCallback,
-    useEffect,
-    useRef,
-    useState,
-} from 'react';
+import { ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { useModal } from 'shared/lib/hooks/useModal/useModal';
+import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
-import { Overlay } from '../Overlay/Overlay';
 
 interface ModalProps {
     className?: string;
@@ -29,50 +22,11 @@ export const Modal = (props: ModalProps) => {
     } = props;
 
     const { theme } = useTheme();
-    const [isClosing, setIsClosing] = useState(false);
-    const [isMounted, setIsMounted] = useState(false);
-
-    const timeRef = useRef<ReturnType<typeof setTimeout>>();
-
-    const closeHandler = useCallback(() => {
-        if (onClose) {
-            setIsClosing(true);
-            timeRef.current = setTimeout(() => {
-                onClose();
-                setIsClosing(false);
-            }, ANIMATION_DELAY);
-        }
-    }, [onClose]);
-
-    const onKeyDown = useCallback(
-        (e: KeyboardEvent) => {
-            if (e.key === 'Escape') {
-                closeHandler();
-            }
-        },
-        [closeHandler],
-    );
-
-    useEffect(() => {
-        if (isOpen) {
-            window.addEventListener('keydown', onKeyDown);
-        }
-
-        return () => {
-            clearTimeout(timeRef.current);
-            window.removeEventListener('keydown', onKeyDown);
-        };
-    }, [isOpen, onKeyDown]);
-
-    useEffect(() => {
-        if (isOpen) {
-            setIsMounted(true);
-        }
-
-        // return () => {
-        //     setIsMounted(false);
-        // };
-    }, [isOpen]);
+    const { isMounted, isClosing, close } = useModal({
+        animationDelay: ANIMATION_DELAY,
+        isOpen,
+        onClose,
+    });
 
     const mods = {
         [cls.opened]: isOpen,
@@ -86,7 +40,7 @@ export const Modal = (props: ModalProps) => {
     return (
         <Portal>
             <div className={classNames(cls.modal, [className], mods)}>
-                <Overlay onClick={closeHandler} />
+                <Overlay onClick={close} />
                 <div className={cls.content}>{children}</div>
             </div>
         </Portal>
