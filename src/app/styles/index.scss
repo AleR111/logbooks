@@ -4,7 +4,8 @@
 @import "themes/normal.scss";
 @import "variables/global.scss";
 
-body {
+body,
+.app_drower {
     font: var(--font-m);
     color: var(--primary-color);
 }
