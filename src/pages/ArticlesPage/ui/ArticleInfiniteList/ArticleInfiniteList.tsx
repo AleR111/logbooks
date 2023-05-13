@@ -1,8 +1,8 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { ArticleList } from 'entities/Article';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { Text } from 'shared/ui/Text/Text';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { ArticleList } from '@/entities/Article';
+import { Text } from '@/shared/ui/Text/Text';
 import { getArticles } from '../../model/slice/articlesPageSlice';
 import {
     getArticlesPageError,

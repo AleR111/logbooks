@@ -1,6 +1,6 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleEditPage.module.scss';
 
 interface ArticleEditPageProps {

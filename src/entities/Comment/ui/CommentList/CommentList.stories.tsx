@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import avatar from 'shared/assets/tests/avatar.webp';
+import avatar from '@/shared/assets/tests/avatar.webp';
 import { CommentList } from './CommentList';
 
 export default {
