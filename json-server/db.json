@@ -640,5 +640,63 @@
       "username": "admin213",
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "good article",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "good article",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "6",
+      "rate": 4,
+      "id": "bWshnGo"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 3,
+      "feedback": "good",
+      "id": "kpYXvpa"
+    },
+    {
+      "userId": "1",
+      "articleId": "12",
+      "rate": 1,
+      "id": "i_SRYQs"
+    },
+    {
+      "userId": "1",
+      "articleId": "15",
+      "rate": 5,
+      "feedback": "nice",
+      "id": "6oq5lew"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "good article",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "good article",
+      "userId": "1",
+      "profileId": "2"
+    }
   ]
 }

@@ -11,6 +11,7 @@ import { articleDetailsPageReducer } from '../../model/slices';
 import cls from './ArticleDetailsPage.module.scss';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleDetailsPageComments } from '../ArticleDetailsPageComments/ArticleDetailsPageComments';
+import { ArticleRating } from '@/features/ArticleRating';
 
 const reducers = {
     articleDetailsPage: articleDetailsPageReducer,
@@ -25,12 +26,17 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props) => {
     const { t } = useTranslation('article');
     const { id } = useParams<{id: string}>();
 
+    if (!id) {
+        return null;
+    }
+
     return (
         <DynamicModuleLoader reducers={reducers} remoteAfterUnmount>
             <Page className={classNames(cls.articleDetailsPage, [className])}>
                 <ArticleDetailsPageHeader />
                 <VStack gap="16" max>
                     <ArticleDetails id={id} />
+                    <ArticleRating articleId={id} />
                     <ArticleRecommendationsList />
                     <ArticleDetailsPageComments id={id} />
                 </VStack>
