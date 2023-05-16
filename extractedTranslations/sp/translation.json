@@ -29,6 +29,7 @@
   "C": "C",
   "Cancel": "Cancel",
   "Cansel": "Cansel",
+  "Close": "Close",
   "Comments": "Comments",
   "Comments is ": "Comments is ",
   "Create article": "Create article",
@@ -42,6 +43,7 @@
   "Incorrect country": "Incorrect country",
   "Incorrect user data": "Incorrect user data",
   "Language": "Language",
+  "Leave your feedback about the article": "Leave your feedback about the article",
   "Lo": "Lo",
   "Log": "Log",
   "Log ": "Log ",
@@ -57,6 +59,7 @@
   "Profile": "Profile",
   "Profile ": "Profile ",
   "Profile not found": "Profile not found",
+  "Rate the article": "Rate the article",
   "Read more": {
     "": {
       "": {
@@ -83,6 +86,7 @@
   "Sine in": "Sine in",
   "Something went wrong": "Something went wrong",
   "Sort by": "Sort by",
+  "Thank you for rating": "Thank you for rating",
   "Type ": "Type ",
   "Type avatar link": "Type avatar link",
   "Type comment": "Type comment",
@@ -94,6 +98,7 @@
   "Your age": "Your age",
   "Your citi": "Your citi",
   "Your city": "Your city",
+  "Your feedback": "Your feedback",
   "Your last name": "Your last name",
   "Your lastname": "Your lastname",
   "Your name": "Your name",
