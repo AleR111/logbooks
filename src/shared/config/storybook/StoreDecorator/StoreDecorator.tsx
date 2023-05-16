@@ -1,3 +1,4 @@
+/* eslint-disable check-imports-plugin/public-api-imports-fsd */
 import { ReducersMapObject } from '@reduxjs/toolkit';
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
