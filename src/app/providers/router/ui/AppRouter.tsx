@@ -5,13 +5,10 @@ import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { AboutPage } from '@/pages/About';
 import { getAuthUserData } from '@/entities/User';
-import {
-    AppRouterProps,
-    AppRouters,
-    routeConfig,
-} from '@/shared/config/routeConfig/routeConfig';
+import { routeConfig } from '@/app/providers/router/сonfig/routeConfig';
 import { PageLoader } from '@/widgets/PageLoader';
 import { RequireAuth } from './RequireAuth';
+import { AppRouterProps } from '@/shared/types/router';
 
 export const AppRouter = memo(() => {
     const renderWithWrapper = useCallback((route: AppRouterProps) => {

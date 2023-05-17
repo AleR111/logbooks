@@ -75,7 +75,17 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'check-imports-plugin/imports-checker': ['error', { alias: '@' }],
-        'check-imports-plugin/public-api-imports-fsd': ['error', { alias: '@' }],
+        'check-imports-plugin/public-api-imports-fsd': [
+            'error',
+            {
+                alias: '@',
+                testFiles: [
+                    '**/*.test.*',
+                    '**/stories.*',
+                    '**/StoreDecorator.tsx',
+                ],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
