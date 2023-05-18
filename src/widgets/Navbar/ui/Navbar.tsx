@@ -9,10 +9,10 @@ import {
     userActions,
 } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { Text, TextTheme } from '@/shared/ui/Text/Text';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Text, TextTheme } from '@/shared/ui/Text';
+import { Avatar } from '@/shared/ui/Avatar';
 import { HStack } from '@/shared/ui/Stack';
 import { Dropdown } from '@/shared/ui/Popups';
 import { NotificationButton } from '@/features/NotificationButton';

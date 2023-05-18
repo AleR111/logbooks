@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget } from 'react';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
+import { Text, TextSize } from '@/shared/ui/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleList.module.scss';
 import { Article } from '../../model/types/article';
