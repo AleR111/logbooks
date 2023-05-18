@@ -1,7 +1,6 @@
 import {
     useCallback, useEffect, useRef, useState,
 } from 'react';
-import { useTheme } from '@/app/providers/ThemeProvider';
 
 interface useModalProps {
     onClose?: () => void;

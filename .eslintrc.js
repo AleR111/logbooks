@@ -79,11 +79,18 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFiles: [
+                testFilesPatterns: [
                     '**/*.test.*',
                     '**/stories.*',
                     '**/StoreDecorator.tsx',
                 ],
+            },
+        ],
+        'check-imports-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
             },
         ],
     },

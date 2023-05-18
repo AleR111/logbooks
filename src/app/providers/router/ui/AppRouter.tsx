@@ -1,14 +1,9 @@
-import React, {
-    memo, Suspense, useCallback, useMemo,
-} from 'react';
-import { useSelector } from 'react-redux';
+import { memo, Suspense, useCallback } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { AboutPage } from '@/pages/About';
-import { getAuthUserData } from '@/entities/User';
-import { routeConfig } from '@/app/providers/router/сonfig/routeConfig';
-import { PageLoader } from '@/widgets/PageLoader';
-import { RequireAuth } from './RequireAuth';
 import { AppRouterProps } from '@/shared/types/router';
+import { PageLoader } from '@/widgets/PageLoader';
+import { routeConfig } from '../сonfig/routeConfig';
+import { RequireAuth } from './RequireAuth';
 
 export const AppRouter = memo(() => {
     const renderWithWrapper = useCallback((route: AppRouterProps) => {
