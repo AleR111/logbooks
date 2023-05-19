@@ -1,9 +1,7 @@
 import { FC } from 'react';
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
 import { Loader } from '@/shared/ui/Loader';
 import { Avatar } from '@/shared/ui/Avatar';

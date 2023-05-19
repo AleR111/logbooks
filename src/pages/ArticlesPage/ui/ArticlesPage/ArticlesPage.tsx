@@ -1,8 +1,5 @@
 import { memo, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
-import { ArticleList, ArticleView, ArticleViewSelector } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -10,15 +7,9 @@ import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitial
 import { Page } from '@/widgets/Page';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+
 import {
-    getArticlesPageError,
-    getArticlesPageIsLoading,
-    getArticlesPageView,
-} from '../../model/selectors/articlesPageSelectors';
-import {
-    articlesPageActions,
     articlesPageReducer,
-    getArticles,
 } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';

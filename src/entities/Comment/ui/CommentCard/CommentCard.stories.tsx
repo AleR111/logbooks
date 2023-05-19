@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import avatar from '@/shared/assets/tests/avatar.webp';
 import { CommentCard } from './CommentCard';
 

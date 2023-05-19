@@ -1,8 +1,6 @@
-import { fireEvent, render, screen } from '@testing-library/react';
-import { withTranslation } from 'react-i18next';
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
-import { renderWithTranslation } from '@/shared/lib/tests/renderWithTranslation/renderWithTranslation';
 import { Profile, profileReducer } from '@/entities/Profile';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';

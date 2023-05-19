@@ -1,4 +1,3 @@
-import { RouteProps } from 'react-router-dom';
 import { UserRole } from '@/entities/User';
 import { AboutPage } from '@/pages/About';
 import { AdminPanelPage } from '@/pages/AdminPanelPage';

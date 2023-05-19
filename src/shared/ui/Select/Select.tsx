@@ -1,5 +1,5 @@
 import {
-    ChangeEvent, FC, memo, useCallback, useMemo,
+    ChangeEvent, useCallback, useMemo,
 } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Select.module.scss';
