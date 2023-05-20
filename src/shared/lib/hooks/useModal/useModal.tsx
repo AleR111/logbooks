@@ -2,6 +2,12 @@ import {
     useCallback, useEffect, useRef, useState,
 } from 'react';
 
+/**
+ * Переиспользуемый хук для модальных компонентов (drawer/modal)
+ * @param animationDelay
+ * @param isOpen
+ * @param onClose
+ */
 interface useModalProps {
     onClose?: () => void;
     isOpen?: boolean;
