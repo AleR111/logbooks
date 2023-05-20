@@ -1,5 +1,5 @@
 import { Rating } from '@/entities/Rating';
-import { rtqApi } from '@/shared/api/rtqApi';
+import { rtqApi } from '@/shared/api/rtkApi';
 
 interface GetArticleRatingProps {
     userId: string;

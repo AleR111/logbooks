@@ -17,7 +17,7 @@ import {
     ArticleDetailsPageSchema,
 } from '@/pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
-import { rtqApi } from '@/shared/api/rtqApi';
+import { rtqApi } from '@/shared/api/rtkApi';
 
 export interface StateSchema {
     counter: CounterSchema;

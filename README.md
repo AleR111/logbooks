@@ -20,8 +20,8 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 - `npm run lint:ts:fix` - Исправление ts файлов линтером
 - `npm run lint:scss` - Проверка scss файлов style линтером
 - `npm run lint:scss:fix` - Исправление scss файлов style линтером
-- `npm run test:unit` - Хапуск unit тестов с jest
-- `npm run test:ui` - Хапуск скриншотных тестов с loki
+- `npm run test:unit` - Запуск unit тестов с jest
+- `npm run test:ui` - Запуск скриншотных тестов с loki
 - `npm run test:ui:ok` - Подтверждение новых скриншотов
 - `npm run test:ui:ci` - Запуск скриншотных тестов в CI
 - `npm run test:ui:report` - Генерация полного отчета для скриншотных тестов
@@ -183,14 +183,14 @@ Clear.args = {
 
 ## Фичи (features)
 
-- [addCommentForm](/src/features/AddCommentForm)
-- [articleRating](/src/features/ArticleRating)
-- [articleRecommendationsList](/src/features/ArticleRecommendationsList)
+- [AddCommentForm](/src/features/AddCommentForm)
+- [ArticleRating](/src/features/ArticleRating)
+- [ArticleRecommendationsList](/src/features/ArticleRecommendationsList)
 - [AuthByUsername](/src/features/AuthByUsername)
-- [avatarDropdown](/src/features/AvatarDropdown)
-- [editableProfileCard](/src/features/EditableProfileCard)
+- [AvatarDropdown](/src/features/AvatarDropdown)
+- [EditableProfileCard](/src/features/EditableProfileCard)
 - [LangSwitcher](/src/features/LangSwitcher)
-- [notificationButton](/src/features/NotificationButton)
-- [profileRating](/src/features/ProfileRating)
+- [NotificationButton](/src/features/NotificationButton)
+- [ProfileRating](/src/features/ProfileRating)
 - [ThemeSwitcher](/src/features/ThemeSwitcher)
 - [UI](/src/features/UI)

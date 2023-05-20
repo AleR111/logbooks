@@ -5,7 +5,7 @@ import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
 import { $api } from '@/shared/api/api';
 import { uiReducer } from '@/features/UI';
-import { rtqApi } from '@/shared/api/rtqApi';
+import { rtqApi } from '@/shared/api/rtkApi';
 import { createReducerManager } from './reducerManager';
 import { StateSchema } from './StateSchema';
 
