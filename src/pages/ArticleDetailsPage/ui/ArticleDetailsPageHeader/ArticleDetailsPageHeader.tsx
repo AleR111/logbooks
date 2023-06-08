@@ -7,7 +7,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { getArticleDetailsData } from '@/entities/Article';
 import { getCanEditArticle } from '../../model/selectors/article';
 import cls from './ArticleDetailsPageHeader.module.scss';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/const/router';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string;
@@ -22,11 +22,13 @@ export const ArticleDetailsPageHeader: React.FC<ArticleDetailsPageHeaderProps> =
     const article = useSelector(getArticleDetailsData);
 
     const onBackToList = useCallback(() => {
-        navigate(`${RoutePath.article_details}`);
+        navigate(getRouteArticles());
     }, [navigate]);
 
     const onEditArticle = useCallback(() => {
-        navigate(`${RoutePath.article_details}/${article?.id}/edit`);
+        if (article?.id) {
+            navigate(getRouteArticleEdit(article.id));
+        }
     }, [navigate, article?.id]);
 
     return (
