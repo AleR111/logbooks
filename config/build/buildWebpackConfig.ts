@@ -19,7 +19,7 @@ export function buildWebpackConfig(
             clean: true,
             publicPath: '/',
         },
-        devtool: isDev ? 'eval-source-map' : undefined,
+        devtool: isDev ? 'eval-cheap-module-source-map' : undefined,
         plugins: buildPlugins(options),
         module: {
             rules: buildLoaders(options),
