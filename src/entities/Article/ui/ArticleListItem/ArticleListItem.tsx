@@ -13,6 +13,8 @@ import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
 import { getRouteArticleDetails } from '@/shared/const/router';
+import { AppImage } from '@/shared/ui/AppImage';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 interface ArticleListItemProps {
     className?: string;
@@ -58,7 +60,8 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
                     </div>
                     <Text title={article.title} className={cls.title} />
                     {types}
-                    <img
+                    <AppImage
+                        fallback={<Skeleton width="100%" height="250px" />}
                         src={article.img}
                         alt={article.title}
                         className={cls.img}
@@ -94,7 +97,8 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
         >
             <Card>
                 <div className={cls.imageWrapper}>
-                    <img
+                    <AppImage
+                        fallback={<Skeleton width="200px" height="200px" />}
                         src={article.img}
                         alt={article.title}
                         className={cls.img}
