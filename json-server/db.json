@@ -615,6 +615,15 @@
         "MANAGER"
       ],
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
     }
   ],
   "profile": [

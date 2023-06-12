@@ -8,9 +8,7 @@ import { Page } from '@/widgets/Page';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 
-import {
-    articlesPageReducer,
-} from '../../model/slice/articlesPageSlice';
+import { articlesPageReducer } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
@@ -39,6 +37,7 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
     return (
         <DynamicModuleLoader reducers={reducers} remoteAfterUnmount={false}>
             <Page
+                data-testid="ArticlesPage"
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.articlesPage, [className])}
             >
