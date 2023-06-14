@@ -47,7 +47,7 @@ export const ArticleList: React.FC<ArticleListProps> = (props) => {
     }
 
     return (
-        <div className={classNames(cls.articleList, [className, cls[view]])}>
+        <div data-testid="ArticleList" className={classNames(cls.articleList, [className, cls[view]])}>
             {articles.map((article) => (
                 <ArticleListItem
                     className={cls.card}

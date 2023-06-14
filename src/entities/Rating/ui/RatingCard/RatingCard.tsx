@@ -62,6 +62,7 @@ export const RatingCard: React.FC<RatingCardProps> = memo((props) => {
         <>
             <Text title={feedbackTitle} />
             <Input
+                data-testid="RatingCard.Input"
                 value={feedback}
                 onChange={setFeedback}
                 placeholder={t('Your feedback')}
@@ -70,10 +71,14 @@ export const RatingCard: React.FC<RatingCardProps> = memo((props) => {
     );
 
     return (
-        <Card max className={className}>
+        <Card data-testid="RatingCard" max className={className}>
             <VStack gap="8" align="center">
                 <Text title={starsCount ? t('Thank you for rating') : title} />
-                <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
+                <StarRating
+                    selectedStars={starsCount}
+                    size={40}
+                    onSelect={onSelectStars}
+                />
             </VStack>
 
             <BrowserView>
@@ -82,12 +87,18 @@ export const RatingCard: React.FC<RatingCardProps> = memo((props) => {
                         {modalContent}
                         <HStack max gap="16" justify="end">
                             <Button
+                                data-testid="RatingCard.Close"
                                 theme={ButtonTheme.OUTLINE_RED}
                                 onClick={cancelHandler}
                             >
                                 {t('Close')}
                             </Button>
-                            <Button onClick={acceptHandler}>{t('Send')}</Button>
+                            <Button
+                                data-testid="RatingCard.Send"
+                                onClick={acceptHandler}
+                            >
+                                {t('Send')}
+                            </Button>
                         </HStack>
                     </VStack>
                 </Modal>

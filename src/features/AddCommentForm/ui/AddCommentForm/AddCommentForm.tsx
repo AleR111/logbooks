@@ -49,17 +49,23 @@ const AddCommentForm: React.FC<AddCommentFormProps> = (props) => {
     return (
         <DynamicModuleLoader reducers={reducers}>
             <HStack
+                data-testid="AddCommentForm"
                 justify="between"
                 max
                 className={classNames(cls.addCommentForm, [className])}
             >
                 <Input
+                    data-testid="AddCommentForm.Input"
                     className={cls.input}
                     value={text ?? ''}
                     onChange={onCommentTextChange}
                     placeholder={t('Type comment')}
                 />
-                <Button onClick={onSendHandler} theme={ButtonTheme.OUTLINE}>
+                <Button
+                    data-testid="AddCommentForm.Button"
+                    onClick={onSendHandler}
+                    theme={ButtonTheme.OUTLINE}
+                >
                     {t('Send')}
                 </Button>
             </HStack>

@@ -20,6 +20,7 @@ export const CommentCard: React.FC<CommentCardProps> = (props) => {
     if (isLoading) {
         return (
             <VStack
+                data-testid="CommentCard.Loading"
                 gap="8"
                 max
                 className={classNames(cls.commentCard, [
@@ -42,6 +43,7 @@ export const CommentCard: React.FC<CommentCardProps> = (props) => {
 
     return (
         <VStack
+            data-testid="CommentCard.Content"
             gap="8"
             max
             className={classNames(cls.commentCard, [className])}
