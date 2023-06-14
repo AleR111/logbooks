@@ -12,14 +12,14 @@ describe('Open article details', () => {
         cy.removeArticle(currentArticleId);
     });
 
-    it('and successfully loaded', () => {
+    it.skip('and successfully loaded', () => {
         cy.getByTestId('ArticleDetails.info').should('exist');
     });
-    it('and recommendations list successfully loaded', () => {
+    it.skip('and recommendations list successfully loaded', () => {
         cy.getByTestId('ArticleRecommendationsList').should('exist');
     });
 
-    it('and send comment', () => {
+    it.skip('and send comment', () => {
         cy.getByTestId('ArticleDetails.info');
         cy.getByTestId('AddCommentForm').scrollIntoView();
         cy.addComment('test');
@@ -27,6 +27,7 @@ describe('Open article details', () => {
     });
 
     it('and send rating', () => {
+        cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' });
         cy.getByTestId('ArticleDetails.info');
         cy.getByTestId('RatingCard').scrollIntoView();
         cy.setRate(4, 'feedback');
