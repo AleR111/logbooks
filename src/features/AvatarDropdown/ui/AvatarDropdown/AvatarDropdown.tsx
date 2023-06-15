@@ -39,15 +39,17 @@ export const AvatarDropdown: React.FC<AvatarDropdownProps> = memo((props) => {
     return (
         <Dropdown
             className={classNames('', [className])}
-            trigger={<Avatar fallbackInverted size={30} src={authData.avatar} />}
+            trigger={
+                <Avatar fallbackInverted size={30} src={authData.avatar} />
+            }
             items={[
                 ...(isAdminPanelAvailable
                     ? [
-                        {
-                            content: t('Admin Panel'),
-                            href: getRouteAdminPanel(),
-                        },
-                    ]
+                          {
+                              content: t('Admin Panel'),
+                              href: getRouteAdminPanel(),
+                          },
+                      ]
                     : []),
                 {
                     content: t('Profile'),

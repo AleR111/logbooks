@@ -8,9 +8,7 @@ import { addCommentFormActions } from '../slice/addCommentFormSlice';
 
 export const sendComment = createAsyncThunk<Comment, void, ThunkConfig<string>>(
     'addCommentForm/sendComment',
-    async (_, {
-        extra, rejectWithValue, getState, dispatch,
-    }) => {
+    async (_, { extra, rejectWithValue, getState, dispatch }) => {
         const userData = getAuthUserData(getState());
         const text = getAddCommentFormText(getState());
         const article = getArticleDetailsData(getState());

@@ -2,7 +2,11 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ArticleList } from './ArticleList';
 import { Article } from '../../model/types/article';
-import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/consts';
+import {
+    ArticleBlockType,
+    ArticleType,
+    ArticleView,
+} from '../../model/consts/consts';
 
 export default {
     title: 'entities/article/ArticleList',
@@ -59,7 +63,7 @@ export const Big = Template.bind({});
 Big.args = {
     articles: new Array(3)
         .fill(0)
-        .map((_, index) => ({...article, id: String(index)})),
+        .map((_, index) => ({ ...article, id: String(index) })),
     view: ArticleView.BIG,
 };
 
@@ -67,7 +71,7 @@ export const Small = Template.bind({});
 Small.args = {
     articles: new Array(9)
         .fill(0)
-        .map((_, index) => ({...article, id: String(index)})),
+        .map((_, index) => ({ ...article, id: String(index) })),
     view: ArticleView.SMALL,
 };
 

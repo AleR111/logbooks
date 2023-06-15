@@ -9,33 +9,42 @@ const recommendationsAdapter = createEntityAdapter<Article>({
 });
 
 export const getArticleRecommendations = recommendationsAdapter.getSelectors(
-    (state: StateSchema) => state.articleDetailsPage?.recommendations
-        || recommendationsAdapter.getInitialState(),
+    (state: StateSchema) =>
+        state.articleDetailsPage?.recommendations ||
+        recommendationsAdapter.getInitialState(),
 );
 
 const articleDetailsPageRecommendationsSlice = createSlice({
     name: 'articleDetailsPageRecommendationsSlice',
     initialState:
-        recommendationsAdapter.getInitialState<ArticleDetailsRecommendationsSchema>({
-            entities: {},
-            ids: [],
-            error: undefined,
-            isLoading: false,
-        }),
+        recommendationsAdapter.getInitialState<ArticleDetailsRecommendationsSchema>(
+            {
+                entities: {},
+                ids: [],
+                error: undefined,
+                isLoading: false,
+            },
+        ),
     reducers: {},
     extraReducers(builder) {
         builder.addCase(fetchArticlesRecommendations.pending, (state) => {
             state.error = undefined;
             state.isLoading = true;
         });
-        builder.addCase(fetchArticlesRecommendations.fulfilled, (state, action) => {
-            state.isLoading = false;
-            recommendationsAdapter.setAll(state, action.payload);
-        });
-        builder.addCase(fetchArticlesRecommendations.rejected, (state, action) => {
-            state.isLoading = false;
-            state.error = action.payload;
-        });
+        builder.addCase(
+            fetchArticlesRecommendations.fulfilled,
+            (state, action) => {
+                state.isLoading = false;
+                recommendationsAdapter.setAll(state, action.payload);
+            },
+        );
+        builder.addCase(
+            fetchArticlesRecommendations.rejected,
+            (state, action) => {
+                state.isLoading = false;
+                state.error = action.payload;
+            },
+        );
     },
 });
 

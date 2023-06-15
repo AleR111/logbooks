@@ -1,6 +1,4 @@
-import {
-    useCallback, useEffect, useRef, useState,
-} from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 /**
  * Переиспользуемый хук для модальных компонентов (drawer/modal)
@@ -15,9 +13,7 @@ interface useModalProps {
 }
 
 export const useModal = (props: useModalProps) => {
-    const {
-        onClose, isOpen, animationDelay,
-    } = props;
+    const { onClose, isOpen, animationDelay } = props;
 
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);

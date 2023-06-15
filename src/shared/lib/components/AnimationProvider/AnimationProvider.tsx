@@ -19,9 +19,11 @@ interface AnimationProviderPayload {
 
 const AnimationContext = createContext<AnimationProviderPayload>({});
 
-export const useAnimationLibs = () => useContext(AnimationContext) as Required<AnimationProviderPayload>;
+export const useAnimationLibs = () =>
+    useContext(AnimationContext) as Required<AnimationProviderPayload>;
 
-const getAsyncAnimationModules = () => Promise.all([import('@react-spring/web'), import('@use-gesture/react')]);
+const getAsyncAnimationModules = () =>
+    Promise.all([import('@react-spring/web'), import('@use-gesture/react')]);
 
 interface AnimationProviderProps {
     children: ReactNode;

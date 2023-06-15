@@ -8,15 +8,16 @@ import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleView } from '../../model/consts/consts';
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
-    .fill(0)
-    .map((_, index) => (
-        <ArticleListItemSkeleton
-            key={index}
-            className={cls.card}
-            view={view}
-        />
-    ));
+const getSkeletons = (view: ArticleView) =>
+    new Array(view === ArticleView.SMALL ? 9 : 3)
+        .fill(0)
+        .map((_, index) => (
+            <ArticleListItemSkeleton
+                key={index}
+                className={cls.card}
+                view={view}
+            />
+        ));
 
 interface ArticleListProps {
     className?: string;
@@ -47,7 +48,10 @@ export const ArticleList: React.FC<ArticleListProps> = (props) => {
     }
 
     return (
-        <div data-testid="ArticleList" className={classNames(cls.articleList, [className, cls[view]])}>
+        <div
+            data-testid="ArticleList"
+            className={classNames(cls.articleList, [className, cls[view]])}
+        >
             {articles.map((article) => (
                 <ArticleListItem
                     className={cls.card}
@@ -61,9 +65,9 @@ export const ArticleList: React.FC<ArticleListProps> = (props) => {
             {isLoading && getSkeletons(view)}
         </div>
 
-    // <div className={classNames(cls.articleList, [className, cls[view]])}>
-    //     {articles.length ? articles.map(renderArticle) : null}
-    //     {isLoading && getSkeletons(view)}
-    // </div>
+        // <div className={classNames(cls.articleList, [className, cls[view]])}>
+        //     {articles.length ? articles.map(renderArticle) : null}
+        //     {isLoading && getSkeletons(view)}
+        // </div>
     );
 };

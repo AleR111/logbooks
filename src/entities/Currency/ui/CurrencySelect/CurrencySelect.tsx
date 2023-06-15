@@ -18,9 +18,7 @@ const options = [
 ];
 
 export const CurrencySelect: FC<CurrencySelectProps> = memo((props) => {
-    const {
-        className, value, onChange, readonly,
-    } = props;
+    const { className, value, onChange, readonly } = props;
 
     const { t } = useTranslation();
 

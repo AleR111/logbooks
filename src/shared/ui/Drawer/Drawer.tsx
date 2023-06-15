@@ -1,6 +1,9 @@
 import { ReactNode, useCallback, useEffect } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AnimationProvider';
+import {
+    AnimationProvider,
+    useAnimationLibs,
+} from '@/shared/lib/components/AnimationProvider';
 import cls from './Drawer.module.scss';
 import { Portal } from '../Portal/Portal';
 import { Overlay } from '../Overlay/Overlay';
@@ -17,9 +20,7 @@ interface DrawerProps {
 const height = window.innerHeight - 100;
 
 export const DrawerContent = (props: DrawerProps) => {
-    const {
-        className, children, isOpen, onClose, lazy,
-    } = props;
+    const { className, children, isOpen, onClose, lazy } = props;
     const { Spring, Gesture } = useAnimationLibs();
 
     const { theme } = useTheme();

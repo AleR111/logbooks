@@ -9,9 +9,7 @@ const initialState: ArticleDetailsSchema = {
 export const articleDetailsSlice = createSlice({
     name: 'articleDetails',
     initialState,
-    reducers: {
-
-    },
+    reducers: {},
     extraReducers(builder) {
         builder.addCase(fetchArticleById.pending, (state) => {
             state.error = undefined;
@@ -28,4 +26,7 @@ export const articleDetailsSlice = createSlice({
     },
 });
 
-export const { actions: articleDetailsActions, reducer: articleDetailsReducer } = articleDetailsSlice;
+export const {
+    actions: articleDetailsActions,
+    reducer: articleDetailsReducer,
+} = articleDetailsSlice;

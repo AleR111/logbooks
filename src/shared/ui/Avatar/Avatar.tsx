@@ -15,9 +15,7 @@ interface AvatarProps {
 }
 
 export const Avatar: FC<AvatarProps> = (props) => {
-    const {
-        className, src, size = 100, alt, fallbackInverted,
-    } = props;
+    const { className, src, size = 100, alt, fallbackInverted } = props;
 
     const styles = useMemo<CSSProperties>(
         () => ({ width: size, height: size }),

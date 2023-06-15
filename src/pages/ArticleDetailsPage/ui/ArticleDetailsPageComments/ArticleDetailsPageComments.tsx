@@ -18,7 +18,9 @@ interface ArticleDetailsPageCommentsProps {
     id?: string;
 }
 
-export const ArticleDetailsPageComments: React.FC<ArticleDetailsPageCommentsProps> = (props) => {
+export const ArticleDetailsPageComments: React.FC<
+    ArticleDetailsPageCommentsProps
+> = (props) => {
     const { className, id } = props;
     const { t } = useTranslation('article');
     const dispatch = useAppDispatch();

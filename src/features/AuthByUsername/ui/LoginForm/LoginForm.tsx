@@ -1,6 +1,4 @@
-import {
-    FC, memo, useCallback,
-} from 'react';
+import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
@@ -23,7 +21,7 @@ import cls from './LoginForm.module.scss';
 
 interface LoginFormProps {
     className?: string;
-    onSuccess: () => void
+    onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = { loginForm: loginReducer };
@@ -58,10 +56,7 @@ const LoginForm: FC<LoginFormProps> = memo((props) => {
     }, [dispatch, username, password, onSuccess]);
 
     return (
-        <DynamicModuleLoader
-            remoteAfterUnmount
-            reducers={initialReducers}
-        >
+        <DynamicModuleLoader remoteAfterUnmount reducers={initialReducers}>
             <div className={classNames(cls.loginForm, [className])}>
                 <Text title={t('Auth form')} />
                 {error && <Text text={error} theme={TextTheme.ERROR} />}

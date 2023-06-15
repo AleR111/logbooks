@@ -17,17 +17,15 @@ const Template: ComponentStory<typeof CommentCard> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-    comment:
-        {
+    comment: {
+        id: '1',
+        text: 'comment',
+        user: {
             id: '1',
-            text: 'comment',
-            user: {
-                id: '1',
-                username: 'user',
-                avatar,
-            },
+            username: 'user',
+            avatar,
         },
-
+    },
 };
 
 export const Loading = Template.bind({});

@@ -1,6 +1,4 @@
-import {
-    FC, memo, useMemo, useState,
-} from 'react';
+import { FC, memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
@@ -28,9 +26,17 @@ export const Sidebar: FC<SidebarProps> = memo((props) => {
         setCollapsed((prev) => !prev);
     };
 
-    const itemList = useMemo(() => sidebarItems.map((item) => (
-        <SidebarItem key={item.path} item={item} collapsed={collapsed} />
-    )), [sidebarItems, collapsed]);
+    const itemList = useMemo(
+        () =>
+            sidebarItems.map((item) => (
+                <SidebarItem
+                    key={item.path}
+                    item={item}
+                    collapsed={collapsed}
+                />
+            )),
+        [sidebarItems, collapsed],
+    );
 
     return (
         <aside

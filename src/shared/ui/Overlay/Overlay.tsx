@@ -10,6 +10,9 @@ export const Overlay: React.FC<OverlayProps> = (props) => {
     const { className, onClick } = props;
 
     return (
-        <div onClick={onClick} className={classNames(cls.overlay, [className])} />
+        <div
+            onClick={onClick}
+            className={classNames(cls.overlay, [className])}
+        />
     );
 };

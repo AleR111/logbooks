@@ -76,6 +76,5 @@ export const ListBox: FC<ListBoxProps> = (props) => {
                 </HListbox.Options>
             </HListbox>
         </HStack>
-
     );
 };

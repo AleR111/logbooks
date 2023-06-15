@@ -6,7 +6,7 @@ import cls from './Code.module.scss';
 
 interface CodeProps {
     className?: string;
-    text: string
+    text: string;
 }
 
 export const Code: React.FC<CodeProps> = (props) => {
@@ -18,7 +18,11 @@ export const Code: React.FC<CodeProps> = (props) => {
 
     return (
         <pre className={classNames(cls.code, [className])}>
-            <Button className={cls.copyBtn} theme={ButtonTheme.CLEAR} onClick={onCopy}>
+            <Button
+                className={cls.copyBtn}
+                theme={ButtonTheme.CLEAR}
+                onClick={onCopy}
+            >
                 <CopyIcon className={cls.copyIcon} />
             </Button>
             <code>{text}</code>

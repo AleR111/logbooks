@@ -20,9 +20,7 @@ const options = [
 ];
 
 export const CountrySelect: FC<CountrySelectProps> = memo((props) => {
-    const {
-        className, value, onChange, readonly,
-    } = props;
+    const { className, value, onChange, readonly } = props;
 
     const { t } = useTranslation();
 

@@ -5,7 +5,10 @@ import {
 } from '@reduxjs/toolkit';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import {
-    Article, ArticleSortField, ArticleType, ArticleView,
+    Article,
+    ArticleSortField,
+    ArticleType,
+    ArticleView,
 } from '@/entities/Article';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { SortOrder } from '@/shared/types';
@@ -17,7 +20,8 @@ const articlesAdapter = createEntityAdapter<Article>({
 });
 
 export const getArticles = articlesAdapter.getSelectors(
-    (state: StateSchema) => state.articlesPage || articlesAdapter.getInitialState(),
+    (state: StateSchema) =>
+        state.articlesPage || articlesAdapter.getInitialState(),
 );
 
 const articlesPageSlice = createSlice({
@@ -95,4 +99,5 @@ const articlesPageSlice = createSlice({
     },
 });
 
-export const { actions: articlesPageActions, reducer: articlesPageReducer } = articlesPageSlice;
+export const { actions: articlesPageActions, reducer: articlesPageReducer } =
+    articlesPageSlice;

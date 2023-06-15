@@ -8,11 +8,11 @@ import { SidebarItemType } from '../../model/types/selectors';
 import cls from './SidebarItem.module.scss';
 
 interface SidebarItemProps {
-    item: SidebarItemType
-    collapsed: boolean
+    item: SidebarItemType;
+    collapsed: boolean;
 }
 
-export const SidebarItem:FC<SidebarItemProps> = memo((props) => {
+export const SidebarItem: FC<SidebarItemProps> = memo((props) => {
     const { item, collapsed } = props;
 
     const { t } = useTranslation();

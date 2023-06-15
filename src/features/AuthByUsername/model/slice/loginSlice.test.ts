@@ -16,7 +16,10 @@ describe('loginSlice.test', () => {
             password: '123',
         };
         expect(
-            loginReducer(state as LoginSchema, loginActions.setPassword('12345')),
+            loginReducer(
+                state as LoginSchema,
+                loginActions.setPassword('12345'),
+            ),
         ).toEqual({ password: '12345' });
     });
     test('test set loading', () => {

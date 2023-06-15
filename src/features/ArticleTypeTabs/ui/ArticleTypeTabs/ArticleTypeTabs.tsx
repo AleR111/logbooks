@@ -5,9 +5,9 @@ import { Tabs, TabItem } from '@/shared/ui/Tabs';
 import { ArticleType } from '@/entities/Article';
 
 interface ArticleTypeTabsProps {
-  className?: string;
-  type: ArticleType
-  onChangeType: (type: TabItem<ArticleType>) => void
+    className?: string;
+    type: ArticleType;
+    onChangeType: (type: TabItem<ArticleType>) => void;
 }
 
 export const ArticleTypeTabs: React.FC<ArticleTypeTabsProps> = (props) => {
@@ -25,13 +25,11 @@ export const ArticleTypeTabs: React.FC<ArticleTypeTabsProps> = (props) => {
     );
 
     return (
-
         <Tabs
             className={classNames('', [className])}
             value={type}
             onTabClick={onChangeType}
             tabs={typeTabs}
         />
-
     );
 };

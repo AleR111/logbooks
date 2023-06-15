@@ -1,6 +1,4 @@
-import {
-    MutableRefObject, ReactNode, useRef, UIEvent,
-} from 'react';
+import { MutableRefObject, ReactNode, useRef, UIEvent } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
@@ -29,7 +27,9 @@ export const Page: React.FC<PageProps> = (props) => {
     const { pathname } = useLocation();
     const dispatch = useAppDispatch();
 
-    const scrollPosition = useSelector((state: StateSchema) => getUIScrollByPath(state, pathname));
+    const scrollPosition = useSelector((state: StateSchema) =>
+        getUIScrollByPath(state, pathname),
+    );
 
     const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
         dispatch(

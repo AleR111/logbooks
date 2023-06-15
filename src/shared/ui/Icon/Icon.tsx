@@ -9,9 +9,7 @@ interface IconProps extends React.SVGProps<SVGSVGElement> {
 }
 
 export const Icon: React.FC<IconProps> = memo((props) => {
-    const {
-        className, Svg, inverted, ...otherProps
-    } = props;
+    const { className, Svg, inverted, ...otherProps } = props;
 
     return (
         <Svg

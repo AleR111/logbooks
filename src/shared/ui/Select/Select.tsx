@@ -1,6 +1,4 @@
-import {
-    ChangeEvent, useCallback, useMemo,
-} from 'react';
+import { ChangeEvent, useCallback, useMemo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Select.module.scss';
 
@@ -19,16 +17,15 @@ interface SelectProps<T extends string> {
 }
 
 export const Select = <T extends string>(props: SelectProps<T>) => {
-    const {
-        className, label, options, value, onChange, readonly,
-    } = props;
+    const { className, label, options, value, onChange, readonly } = props;
 
     const optionsList = useMemo(
-        () => options?.map((opt) => (
-            <option value={opt.value} className={cls.option}>
-                {opt.content}
-            </option>
-        )),
+        () =>
+            options?.map((opt) => (
+                <option value={opt.value} className={cls.option}>
+                    {opt.content}
+                </option>
+            )),
         [options],
     );
 

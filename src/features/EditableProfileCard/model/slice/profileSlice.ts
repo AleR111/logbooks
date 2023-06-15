@@ -58,4 +58,5 @@ export const profileSlice = createSlice({
     },
 });
 
-export const { actions: profileActions, reducer: profileReducer } = profileSlice;
+export const { actions: profileActions, reducer: profileReducer } =
+    profileSlice;

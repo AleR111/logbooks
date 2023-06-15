@@ -1,5 +1,10 @@
 import React, {
-    FC, InputHTMLAttributes, memo, useEffect, useRef, useState,
+    FC,
+    InputHTMLAttributes,
+    memo,
+    useEffect,
+    useRef,
+    useState,
 } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
@@ -13,7 +18,7 @@ interface InputProps extends HTMLInputProps {
     className?: string;
     value?: string | number;
     onChange?: (value: string) => void;
-    readonly?: boolean
+    readonly?: boolean;
 }
 
 export const Input: FC<InputProps> = memo((props) => {

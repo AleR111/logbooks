@@ -11,7 +11,7 @@ interface ProfilePageProps {
 const ProfilePage: FC<ProfilePageProps> = (props) => {
     const { className } = props;
 
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
 
     return (
         <Page data-testid="ProfilePage" className={classNames('', [className])}>

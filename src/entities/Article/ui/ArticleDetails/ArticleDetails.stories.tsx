@@ -57,13 +57,13 @@ const article: Article = {
 };
 
 export const Primary = Template.bind({});
-Primary.decorators = [StoreDecorator({articleDetails: {data: article}})];
+Primary.decorators = [StoreDecorator({ articleDetails: { data: article } })];
 Primary.args = {};
 
 export const Loading = Template.bind({});
-Loading.decorators = [StoreDecorator({articleDetails: {isLoading: true}})];
+Loading.decorators = [StoreDecorator({ articleDetails: { isLoading: true } })];
 Loading.args = {};
 
 export const Error = Template.bind({});
-Error.decorators = [StoreDecorator({articleDetails: {error: 'error'}})];
+Error.decorators = [StoreDecorator({ articleDetails: { error: 'error' } })];
 Error.args = {};

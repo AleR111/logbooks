@@ -8,7 +8,7 @@ interface PageErrorProps {
     className?: string;
 }
 
-export const PageError:FC<PageErrorProps> = (props) => {
+export const PageError: FC<PageErrorProps> = (props) => {
     const { className } = props;
     const { t } = useTranslation();
 
@@ -19,9 +19,7 @@ export const PageError:FC<PageErrorProps> = (props) => {
 
     return (
         <div className={classNames(cls.pageError, [className])}>
-            <p>
-                {t('Something went wrong')}
-            </p>
+            <p>{t('Something went wrong')}</p>
             <Button onClick={reloadPage}>{t('Reload page')}</Button>
         </div>
     );

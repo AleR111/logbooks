@@ -20,9 +20,7 @@ describe('validateProfileData.test', () => {
     });
 
     test('should return no data', () => {
-        expect(validateProfileData()).toEqual([
-            ValidateProfileError.NO_DATA,
-        ]);
+        expect(validateProfileData()).toEqual([ValidateProfileError.NO_DATA]);
     });
 
     test('should return Incorrect user data', () => {

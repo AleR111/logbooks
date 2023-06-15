@@ -13,7 +13,9 @@ interface ArticleDetailsPageHeaderProps {
     className?: string;
 }
 
-export const ArticleDetailsPageHeader: React.FC<ArticleDetailsPageHeaderProps> = (props) => {
+export const ArticleDetailsPageHeader: React.FC<
+    ArticleDetailsPageHeaderProps
+> = (props) => {
     const { className } = props;
     const { t } = useTranslation('article');
     const navigate = useNavigate();
@@ -32,11 +34,7 @@ export const ArticleDetailsPageHeader: React.FC<ArticleDetailsPageHeaderProps> =
     }, [navigate, article?.id]);
 
     return (
-        <div
-            className={classNames(cls.articleDetailsPageHeader, [
-                className,
-            ])}
-        >
+        <div className={classNames(cls.articleDetailsPageHeader, [className])}>
             <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                 {t('Back to list')}
             </Button>

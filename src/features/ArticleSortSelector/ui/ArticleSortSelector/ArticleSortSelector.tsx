@@ -17,9 +17,7 @@ interface ArticleSortSelectorProps {
 export const ArticleSortSelector: React.FC<ArticleSortSelectorProps> = (
     props,
 ) => {
-    const {
-        className, sort, order, onChangeSort, onChangeOrder,
-    } = props;
+    const { className, sort, order, onChangeSort, onChangeOrder } = props;
     const { t } = useTranslation();
 
     const orderOptions = useMemo<SelectOption<SortOrder>[]>(

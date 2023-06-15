@@ -24,9 +24,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
-    const {
-        className, article, view, target,
-    } = props;
+    const { className, article, view, target } = props;
     const { t } = useTranslation();
 
     const types = <Text text={article.type.join(', ')} className={cls.types} />;

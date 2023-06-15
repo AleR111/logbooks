@@ -10,9 +10,7 @@ interface SkeletonProps {
 }
 
 export const Skeleton: React.FC<SkeletonProps> = (props) => {
-    const {
-        className, height, width, border,
-    } = props;
+    const { className, height, width, border } = props;
 
     const styles: CSSProperties = {
         height,

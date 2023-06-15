@@ -45,32 +45,32 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> = memo((props) => {
 
     const renderBlock = useCallback((block: ArticleBlock) => {
         switch (block.type) {
-        case ArticleBlockType.TEXT:
-            return (
-                <ArticleTextBlockComponent
-                    key={block.id}
-                    className={cls.block}
-                    block={block}
-                />
-            );
-        case ArticleBlockType.IMAGE:
-            return (
-                <ArticleImageBlockComponent
-                    key={block.id}
-                    className={cls.block}
-                    block={block}
-                />
-            );
-        case ArticleBlockType.CODE:
-            return (
-                <ArticleCodeBlockComponent
-                    key={block.id}
-                    className={cls.block}
-                    block={block}
-                />
-            );
-        default:
-            return null;
+            case ArticleBlockType.TEXT:
+                return (
+                    <ArticleTextBlockComponent
+                        key={block.id}
+                        className={cls.block}
+                        block={block}
+                    />
+                );
+            case ArticleBlockType.IMAGE:
+                return (
+                    <ArticleImageBlockComponent
+                        key={block.id}
+                        className={cls.block}
+                        block={block}
+                    />
+                );
+            case ArticleBlockType.CODE:
+                return (
+                    <ArticleCodeBlockComponent
+                        key={block.id}
+                        className={cls.block}
+                        block={block}
+                    />
+                );
+            default:
+                return null;
         }
     }, []);
 
@@ -141,7 +141,11 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> = memo((props) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} remoteAfterUnmount>
-            <VStack gap="16" max className={classNames(cls.articleDetails, [className])}>
+            <VStack
+                gap="16"
+                max
+                className={classNames(cls.articleDetails, [className])}
+            >
                 {content}
             </VStack>
         </DynamicModuleLoader>

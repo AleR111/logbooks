@@ -10,14 +10,12 @@ interface ArticleEditPageProps {
 const ArticleEditPage: React.FC<ArticleEditPageProps> = (props) => {
     const { className } = props;
     const { t } = useTranslation();
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
     const isEdit = Boolean(id);
 
     return (
         <div className={classNames(cls.articleEditPage, [className])}>
-            {
-                isEdit ? `edit${id}` : 'new'
-            }
+            {isEdit ? `edit${id}` : 'new'}
         </div>
     );
 };
