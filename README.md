@@ -2,17 +2,17 @@
 
 ```
 npm install - install the dependencies
-npm run start:dev or npm run start:dev:vite - launching the server + frontend of the project in dev mode
+npm run start:dev or npm run start:dev:vite - Running the server + frontend of the project in dev mode
 ```
 
 ----
 
 ## Scripts
 
-- `npm run start` - Running frontend project on webpack dev server
-- `npm run start:vite` - Launching a frontend project on vite
-- `npm run start:dev` - Launch frontend project on webpack dev server + backend
-- `npm run start:dev:vite` - Launch frontend project on vite + backend
+- `npm run start` - Start frontend project on webpack dev server
+- `npm run start:vite` - Start a frontend project on vite
+- `npm run start:dev` - Start frontend project on webpack dev server + backend
+- `npm run start:dev:vite` - Start frontend project on vite + backend
 - `npm run start:dev:server` - Start the backend server
 - `npm run build:prod` - Build in prod mode
 - `npm run build:dev` - Build in dev mode (not minimized)
@@ -27,7 +27,7 @@ npm run start:dev or npm run start:dev:vite - launching the server + frontend of
 - `npm run test:ui:report` - Generating a full report for screenshot tests
 - `npm run test:ui:json` - Generation of a json report for screenshot tests
 - `npm run test:ui:html` - Generating HTML report for screenshot tests
-- `npm run storybook` - launch Storybook
+- `npm run storybook` - Start Storybook
 - `npm run storybook:build` - Building a storybook build
 - `npm run generate:slice` - Script for generating FSD slices
 - `npm run remove-feature` - Script for switching of features 
@@ -70,14 +70,14 @@ More about tests - [testing documentation](/docs/tests.md)
 The project uses eslint to check typescript code and stylelint to check files with styles.
 
 Also, for strict control of the main architectural principles
-, its own eslint plugin *eslint-plugin-ulbi-tv-plugin* is used,
+, its own eslint plugin *eslint-plugin-check-imports-plugin* is used,
 which contains 3 rules
 1) imports-checker - prohibits the use of absolute imports within a single module
 2) layer-imports - checks the correctness of using layers from the FSD point of view
 (for example, widgets cannot be used in features and entitites)
 3) public-api-imports-fsd - allows importing from other modules only from the public api. Has auto fix
 
-##### Launching linters
+##### Running linters
 - `npm run lint:ts` - Checking ts files by linter
 - `npm run lint:ts:fix` - Fixing ts files by linter
 - `npm run lint:scss` - Checking scss files with a linter
@@ -175,9 +175,13 @@ It is allowed to use feature flags only with the help of the toggleFeatures help
 an object with options is passed to it
 
 {
+
     name: name of the flag feature,
+
     on: the function that will work after the feature is enabled
-    of: a function that will work after the feature is turned off
+
+    off: a function that will work after the feature is turned off
+    
 }
 
 To automatically remove a feature, use the remove-feature.ts script,
